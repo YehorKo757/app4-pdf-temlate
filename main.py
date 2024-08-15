@@ -12,6 +12,7 @@ for index, row in data.iterrows():
     pdf.set_text_color(100, 100, 100)
     pdf.cell(w=0, h=12, txt=row["Topic"], align="L",
              ln=1, border=0)
+
     for y in range(21,298,10):
         pdf.line(x1=10, y1=y, x2=200, y2=y)
 
@@ -24,6 +25,7 @@ for index, row in data.iterrows():
 
     for i in range(0,row["Pages"]-1):
         pdf.add_page()
+
         for y in range(21, 298, 10):
             pdf.line(x1=10, y1=y, x2=200, y2=y)
         # Set the footer for other pages
